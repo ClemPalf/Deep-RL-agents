@@ -5,7 +5,7 @@ This repository contains an implementation of a Deep-Q-Network algorithm with th
 - Duelling DQN
 
 
-The target of the agent is to collect good bananas in a square world which is similar to the [banana collector of Unity](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).<br/>
+The target of the agent is to collect bananas in a square world which is similar to the [banana collector of Unity](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).<br/>
 
 <p align="center">
   <img src="https://github.com/ClemPalf/Deep-RL-agents/blob/main/Improved%20DQN/images/banana.gif"/>
