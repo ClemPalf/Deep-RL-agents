@@ -1,3 +1,20 @@
+# unity-ml-banana
+This repository contains an implementation of reinforcement learning based on Deep-Q-Network (DQN), Double DQN, Dueling DQN, and Priority Experience Replay.<br/>
+The target of the agent is to collect good bananas in a square world which is similar to the [banana collector of Unity](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).<br/>
+For each yellow banana that is collected, the agent is given a reward of +1. The blue ones give -1 reward.<br/>
+![Banana](images/banana.png)<br/>
+The agent has 4 actions:
+* move forward
+* move backward
+* turn left
+* and turn right<br/>
+`The environment is considered as solved if the agent is winning an average of +13 points for 100 consecutive episodes.`<br/>
+A video of a trained agent can be found by clicking on the image here below <br/>
+[![Video](https://img.youtube.com/vi/Ig4i73Y92EQ/0.jpg)](https://www.youtube.com/watch?v=Ig4i73Y92EQ)
+
+
+
+
 
 ## Requirements
 To run the project, follow the next steps:
