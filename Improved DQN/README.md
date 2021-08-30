@@ -1,6 +1,6 @@
 
 ## Requirements
-To run the codes, follow the next steps:
+To run the project, follow the next steps:
 * Create a new environment:
 	* __Linux__ or __Mac__: 
 	```bash
