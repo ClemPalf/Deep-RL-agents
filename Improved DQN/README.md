@@ -1,6 +1,8 @@
 # Improved DQN
 This repository contains an implementation of a Deep-Q-Network algorithm with the following improvements:  
+- Double DQN
 - Prioritized experience replay    
+- Duelling DQN
 
 
 The target of the agent is to collect good bananas in a square world which is similar to the [banana collector of Unity](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).<br/>
