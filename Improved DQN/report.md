@@ -9,6 +9,8 @@ agent = Agent(state_size=8, action_size=4, seed=0)
 agent.qnetwork_local.load_state_dict(torch.load('weights_agent1.pth'))
 ```
 
+Baseline: 
+
 ## Agent 1: DDQN
 The popular Q-learning algorithm is known to overestimate action values under certain conditions. The idea of [Double-Q-Learning](https://arxiv.org/abs/1509.06461) has been proven very effective to solve this problem and increase the learning speed.  
   
