@@ -1,5 +1,5 @@
-## Precis
-This repository is composed of 3 different agent.
+# Precis
+This repository is composed of 3 different agents.
 In order to choose which one you want to see perform, make the appropriate changes within *main.py*:  
 
 ```
