@@ -9,7 +9,7 @@ agent = Agent(state_size=8, action_size=4, seed=0)
 agent.qnetwork_local.load_state_dict(torch.load('weights_agent1.pth'))
 ```
 
-Baseline: 
+Baseline: Explain the original algo + Table of paramters
 
 ## Agent 1: DDQN
 The popular Q-learning algorithm is known to overestimate action values under certain conditions. The idea of [Double-Q-Learning](https://arxiv.org/abs/1509.06461) has been proven very effective to solve this problem and increase the learning speed.  
@@ -23,3 +23,6 @@ The main idea is that when udpating the local neural net parameters, the action 
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
+
+Potential change of parameters: 
