@@ -1,5 +1,7 @@
 # Improved DQN
-This repository contains an implementation of reinforcement learning based on Deep-Q-Network (DQN), Double DQN, Dueling DQN, and Priority Experience Replay.<br/>
+This repository contains an implementation of DQN with the following improvements:  
+- Prioritized experience replay  
+- 
 The target of the agent is to collect good bananas in a square world which is similar to the [banana collector of Unity](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).<br/>
 For each yellow banana that is collected, the agent is given a reward of +1. The blue ones give -1 reward.<br/>
 ![Banana](images/banana.png)<br/>
