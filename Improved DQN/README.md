@@ -49,7 +49,7 @@ To run the project, follow the next steps:
 * Install the dependencies under the folder python/
 ```bash
 	cd python
-	pip install .
+	pip install -r requirements.txt .
 ```
 * Create an IPython kernel for the `dqn` environment
 ```bash
