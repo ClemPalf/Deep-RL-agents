@@ -1,5 +1,5 @@
 # Improved DQN
-This repository contains an implementation of DQN with the following improvements:  
+This repository contains an implementation of a Deep-Q-Network algorithm with the following improvements:  
 - Prioritized experience replay    
 
 
