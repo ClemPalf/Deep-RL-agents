@@ -72,4 +72,4 @@ Model.py and dqn_agent.py respectively contain the neural architecture and the D
   
 With Navigation.ipynd, you can train and test the agent within the previously described environment. 
 
-Report.md contains information about the algorithm
+Report.md contains information about the algorithm.
