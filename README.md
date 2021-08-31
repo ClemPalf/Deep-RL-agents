@@ -7,7 +7,7 @@ This repository contains different implementation of deep reinforcement learning
 </p>  
 
 Including:  
--	[An improved DQN agent](https://github.com/ClemPalf/Deep-RL-agents/tree/main/Improved%20DQN), performing within an environment similar to the [unity banana one](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).  
+-	[An improved DQN agent](https://github.com/ClemPalf/Deep-RL-agents/tree/main/Improved%20DQN), performing within an environment similar to [unity banana](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).  
 
 
 
