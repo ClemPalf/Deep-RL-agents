@@ -1,6 +1,6 @@
 # Deep-RL-agents
 
-This repository contains different implementation of deep reinforcement learning algorithm to solve Unity environments.  
+This repository contains different implementation of deep reinforcement learning algorithms to solve Unity environments.  
 
 <p align="center">
   <img src="https://github.com/ClemPalf/Deep-RL-agents/blob/main/agent.jpg?raw=true"/>
