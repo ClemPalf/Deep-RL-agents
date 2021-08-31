@@ -68,5 +68,6 @@ jupyter notebook
 * If necessary, inside the ipynb files, change the path to the unity environment appropriately  
 
 ## Content
-Model.py and dqn_agent.py respectively contain the neural architecture and the and the DQN agent.   
+Model.py and dqn_agent.py respectively contain the neural architecture and the DQN agent.   
+  
 Within Navigation.ipynd, you can train and test your agent within the previously described environment. 
