@@ -7,7 +7,7 @@
 
 ## Introduction
 
-In this project, we will create an agent to reach the green balooon. The agent is in form of a robotic arm which have a freedom to move in all direction. The term agent here is a robot built using Artificial Intelligence. More precisly, we will be using a Deep Deterministic Policy Gradient(DDPG) algorithm as implemented in [this paper](https://arxiv.org/abs/1509.02971). We will use [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment to train the agent. The following gif picture depicts the environment we will solve using the agent.
+In this project, we will create an agent to reach the green balooon. The agent is in form of a robotic arm which have a freedom to move in all direction. The term agent here is a robot built using Artificial Intelligence. More precisly, we will be using a Deep Deterministic Policy Gradient (DDPG) algorithm as implemented in [this paper](https://arxiv.org/abs/1509.02971). The following gif picture depicts the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment we will solve using the agent.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif"/>
