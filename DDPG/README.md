@@ -97,7 +97,7 @@ In order to understand how to create a smart agent, we must recognize the enviro
 As you can see in the **Explore the Environment** section, the agent is still taking random actions and generate zero points during the gameplay. In order to create a smart agent, we need to train the agent by following Step 4!
 
 ### Watch the Smart Agent Play
-After we train to agent how to better play the game, we can watch the agent play with better decision and better score. Howevever, we can not see the agent play in live gameplay in this notebook.
+After we train to agent how to better play the game, we can watch the agent play with better decision and better score by loading the neural net weights (Step 5). Howevever, we can not see the agent play in live gameplay in this notebook.
 
 ## License
 This repository is under the **MIT license**.
