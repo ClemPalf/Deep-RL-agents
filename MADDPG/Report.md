@@ -1,35 +1,36 @@
 # Precis
 
-This DDPG agent was initially built following the original [Continuous control with deep reinforcement learning paper](https://arxiv.org/abs/1509.02971).  
-The main idea consists in implementing actor_critic methods to solve an environment with continuous action spaces.  
+MADDPG is a multi-agent variant of DDPG, a model-free, off-policy, policy gradient-based algorithm that uses two separate deep neural networks (one actor, one critic) to both explore the stocastic environment and, separately, learn the best policy to achieve maximum reward. DDPG has been shown to be quite effective at continuous control tasks and here the multi-agent version is applied to this continuous control task.
 
 ## Specifications: 
 
-DDPG with experience replay uses 2 networks for each actor and critic element, one as source network which makes the predictions and other as target which after every set interatctions with the environment updates the source networks.
+2 identical DDPG agents were created. 
+An agent is composed of 4 different deep neural networks. DDPG with experience replay uses 2 networks for each actor and critic element, one as source network which makes the predictions and other as target which after every set interatctions with the environment updates the source networks.  
 
 The critic (value) network maps (state, action) pairs -> Q-values.  
-The actor (policy) network maps states -> Actions. 
+The actor (policy) network maps states -> Actions.  
 
-Exeriences (state, reward, action, next_state) get stored into a replay buffer of size 1,000,000.  
-Every 10 timsteps, we sample a batch of 128 elements from the replay buffer to train the actor and critic networks 10 times. This methods tends to make the training more stable.  
+Each network is composed of two hidden layers of 256-128 units, with ReLU activation functions on the hidden layers and tanh on the output layers. 
+The actor network was getting fed the concatenated states from both agents.  
+The critic network was getting fed the concatenated states from both agents, and their actions.
 
-First, the critic is trained using the idea of Double Q training (the action value within the TD target is calculated by selecting the best action with the local net, but estimated using the target net). To avoid divergence, the weights are clipped at 1. Secondly, the actor is trained using the negative of the critic prediction.  
-Additionnaly, the target networks were soft-updated using the following formula:  θ_target = τ*θ_local + (1 - τ)*θ_target with τ = 1e-3   
+Exeriences (state, reward, action, next_state) were stored into a replay buffer of size 1,000,000. (Each agent has its own buffer, yet, they store the states an action from both agent). 
+Every timstep, a batch of 128 elements were sampled from the replay buffer to train the actor and critic networks. 
   
-To explore the environment, noises were added to the action values using the Ornstein-Uhlenbeck process. This noise was slowly decay with an epislon value decreasing of 1e-6 at every training step.
+To explore the environment, noises were added to the action values using the Ornstein-Uhlenbeck process. This noise was slowly decay with an noise schedule. More precisly:  
+noise_schedule = lambda episode: max(NOISE_END, NOISE_START - episode * ((NOISE_START - NOISE_END) / NOISE_DECAY))  
+With: NOISE_START = 6, NOISE_END = 6, and NOISE_DECAY = 500
 
 
-- The actor network is composed of 4 fully-connected layers with 256, 128, 64, and 4 units.
-- The critic network is composed of 3 fully-connected layers with 256, 128, and 1 units. Note that for the first layer, only the state is used as input, the output of this layer is then concatenated with the action before passing through the others.  
    
 The following table contains the rest of the hyperparameters used within this implemetation:
 | Parameter     | Description                 | Value    |
 | ------------- |-----------------------------|----------|
 | GAMMA         | Discount factor             | 0.99     |
-| LR_ACTOR      | Learning rate of the actor  | 2e-4     |
-| LR_CRITIC     | Learning rate of the critic | 2e-4     |
+| LR_ACTOR      | Learning rate of the actor  | 1e-3     |
+| LR_CRITIC     | Learning rate of the critic | 1e-3     |
 | WEIGHT_DECAY  | L2 weight decay             | 0        |
-
+| TAU           | Soft update coefficient     | 6e-2     |
 
 
 ## Performance: 
