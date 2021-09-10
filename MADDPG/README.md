@@ -1,12 +1,17 @@
-# Udacity - Deep Reinforcement Learning Nanodegree (Collaboration and Competition)
+# MADDPG to play Tennis
 
-### Project Details
+## Introduction
 
-This is the third project of the Deep Reinforcement Learning Nanodegree. I trained a Multi DDPG Agent to solve the [Tennis](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#Tennis) environment.  This project is influenced by the previous one: https://github.com/escribano89/reacher-ddpg and the DDPG implementations from the Udacity's repository https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum.
+
+<p align="center">
+  <img src="https://github.com/ClemPalf/Deep-RL-agents/blob/main/MADDPG/images/illustration.gif"/>
+</p>
+
+
 
 In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
-The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
+The observation space consists of 24 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
 
 The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
 
@@ -62,36 +67,20 @@ In order to prepare the environment, follow the next steps after downloading thi
 * Change the kernel of your environment to `drlnd`
 * Open the **params.py** file and change the path to the unity environment appropriately (UNITY_EXE_PATH=PATH_OF_THE_TENNIS_EXE)
 
-## Getting started
+## Instructions
 
-If you want to test the trained agents, execute the **test.py** file. 
+### Navigating The Source Code
+There are three important files which contains the source code to run and train our agent:
+- `Tennis.ipynb` contains the instructions to explore the environent, train the agent to be smart and run the smart agent.
+- `MADDPG_agent.py` contains the source code which describes how the agent works
+- `models.py` contains the source code of the deep learning models for the actor and critic.
 
-If you want to train the agents, execute the **train.py** file. After reaching the goal, the networks weights will be stored in the project's root folder.
+### Explore the Environment
+In order to understand how to create a smart agent, we must recognize the environment first. Please, open `Continious Control.ipynb` using Jupyter Notebook and follow these steps:
+- Step 1 : Start the Environment
+- Step 2 : Examine the State and Action Spaces
+- Step 3 : Take Random Actions in the Environment
+- TRAIN : Train the agent using the algo described in Report.md
 
-
-## Resources
-
-* report.pdf: A document that describes the details of the implementation and future proposals.
-* madddpg: implemented agent using the MADDPG algorithm (contains ddpg agents)
-* ddpg: ddpg agent
-* actor: the actor NN model
-* critic: the critic NN model
-* actor_critic: The actor-critic model.
-* unity_env: a class for handling the unity environment
-* replay_buffer: a class for handling the experience replay
-* ou_noise: a class for handling the initial exploration noise
-* test.py: Entry point for testing the agents using the trained networks
-* train.py: Entry point for training the agents using MADDPG algorithm
-* *.pth files: Our model's weights ***(Solved in less than 1100 episodes)***
-
-## Trace of the training
-
-![Training](https://github.com/escribano89/tennis-maddpg/blob/main/score.PNG)
-
-![Training](https://github.com/escribano89/tennis-maddpg/blob/main/trace.PNG)
-
-## Video
-
-You can find an example of the trained agents [here](https://youtu.be/ii6CPP9cpIM)
-
-[![Navigation](https://img.youtube.com/vi/ii6CPP9cpIM/0.jpg)](https://youtu.be/ii6CPP9cpIM)
+## License
+This repository is under the **MIT license**.
