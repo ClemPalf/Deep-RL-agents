@@ -40,6 +40,7 @@ Using the aformentionned configuration, the environment was solved in 635 episod
 </p>
 
 ## Recommandations: 
-To increase the speed of learning, one could select the batch of experiences to train in a more targeted way.  
-Prioritized Experience Replay is a type of experience replay in reinforcement learning where we select more frequently replay transitions with high expected learning progress, as measured by the magnitude of their temporal-difference (TD) error.  
+I honestly don't have much recommendations as making it work was aleady quite a success ^^.  
+
+Prioritized experience replay maybe?
 
