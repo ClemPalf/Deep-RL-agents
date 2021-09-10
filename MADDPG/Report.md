@@ -14,8 +14,8 @@ Each network is composed of two hidden layers of 256-128 units, with ReLU activa
 The actor network was getting fed the concatenated states from both agents.  
 The critic network was getting fed the concatenated states from both agents, and their actions.
 
-Exeriences (state, reward, action, next_state) were stored into a replay buffer of size 1,000,000. (Each agent has its own buffer, yet, they store the states an action from both agent). 
-Every timstep, a batch of 128 elements were sampled from the replay buffer to train the actor and critic networks. 
+Exeriences (state, reward, action, next_state) were stored into a replay buffer of size 1,000,000. (Each agent has its own buffer, yet, they store the states and action from both agent).  
+Every timstep, a batch of 128 elements were sampled from the replay buffer to train the actor and critic networks.  
   
 To explore the environment, noises were added to the action values using the Ornstein-Uhlenbeck process. This noise was slowly decay with an noise schedule. More precisly:  
 noise_schedule = lambda episode: max(NOISE_END, NOISE_START - episode * ((NOISE_START - NOISE_END) / NOISE_DECAY))  
@@ -34,9 +34,9 @@ The following table contains the rest of the hyperparameters used within this im
 
 
 ## Performance: 
-Using the aformentionned configuration, the environment was solved in 129 episodes.
+Using the aformentionned configuration, the environment was solved in 635 episodes.
 <p align="center">
-  <img src="https://github.com/ClemPalf/Deep-RL-agents/blob/main/DDPG/images/Results.png"/>
+  <img src="https://github.com/ClemPalf/Deep-RL-agents/blob/main/MADDPG/images/Results.png"/>
 </p>
 
 ## Recommandations: 
